@@ -9,18 +9,18 @@ while(count < n)//ввод строк и занесение их в массив
     array[count] = Console.ReadLine();
     count = count + 1;
 }
-string[] result = new string[n];
-count = 0;
-int res = 0;
-while (count < n)
+string[] result = new string[n];//результирующий массив
+count = 0;//обнуляем счетчик для нового перебора
+int res = 0;//счетчик для результирующего массива
+while (count < n)//перебираем полученный массив
 {
-    if (array[count].Length <= 3)
+    if (array[count].Length <= 3)//отбираем строки с требуемыми параметрами
     {
-        result[res] = array[count];
+        result[res] = array[count];//сохраняем в результирующий массив
         res = res + 1;
     }
     count = count + 1;
 }
-Console.WriteLine($"Строки длиной меньше или равной 3 символам: \n{string.Join('\n', result)}" );
-Console.ReadKey();
+Console.WriteLine($"Строки длиной меньше или равной 3 символам: \n{string.Join('\n', result)}" );//вывод результата
+Console.ReadKey();//удержание консоли
 
